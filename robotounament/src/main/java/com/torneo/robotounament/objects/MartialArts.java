@@ -2,10 +2,33 @@ package com.torneo.robotounament.objects;
 
 public enum MartialArts {
 
-    MartialArts(int energy, int power){
-        this.energy = energy;
-        this.power = power;
-        this.works = true;
+    TAEKWONDO,
+    KUNGFU,
+    KARATE,
+    JUDO,
+    BOXING,
+    SUMO,
+    AIKIDO,
+    ESGRIMA,
+    KICKBOXING,
+    LUCHA_LIBRE,
+    NADA;
+
+    private boolean standing;
+
+    private boolean floor;
+
+    private boolean kick;
+
+    private boolean punching;
+
+    private int agilityConsumption;
+
+    private int powerConsumption;
+
+    private boolean accesory;
+
+    MartialArts(){
     }
     
 }

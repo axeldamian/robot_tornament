@@ -26,24 +26,48 @@ public class Piloto {
 
     private int championshipsWon;
 
-    private boolean penalized;
-
     private int datesPenalized;
+
+    private int battles;
 
     private boolean duelBeforeTheBattle;
 
-    public Piloto() {
+    public Piloto(String name, int age, int weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+
         this.experience = 0;
-        this.penalized = false;
         this.datesPenalized = 0;
         this.duelBeforeTheBattle = false;
         this.battlesLose = 0;
         this.battlesWon = 0;
         this.championshipsWon = 0;
+        this.battles = 0;
+    }
+
+    public void incrementBattles(){
+        this.battles = this.battles + 1;
+    }
+
+    public int getBattles(){
+        return this.battles;
+    }
+
+    public boolean getDuelBeforeBattle(){
+        return this.duelBeforeTheBattle;
+    }
+
+    public void penalizeWithDuelBeforeBattle(){
+        this.duelBeforeTheBattle = true;
+    }
+
+    public boolean isPenalized(){
+        return this.datesPenalized != 0;
     }
 
     public void toPenalize(int days){
-        this.penalized = true;
+        this.datesPenalized = days;
     }
 
     public int getAgility() {
