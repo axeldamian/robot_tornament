@@ -2,17 +2,17 @@ package com.torneo.robotounament.objects;
 
 public class Piloto {
 
+    private String name;
+
+    private int age;
+
     private int agility;
 
     private boolean defensive;
 
     private boolean attacker;
 
-    private int age;
-
     private int weight;
-
-    private String name;
 
     private int creativity;
 
@@ -44,6 +44,14 @@ public class Piloto {
         this.battlesWon = 0;
         this.championshipsWon = 0;
         this.battles = 0;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public int getAge(){
+        return this.age;
     }
 
     public void incrementBattles(){
@@ -98,6 +106,4 @@ public class Piloto {
         return this.championshipsWon;
     }
 
-
-    
 }
