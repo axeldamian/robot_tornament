@@ -1,34 +1,15 @@
 package com.torneo.robotounament.objects;
 
-public enum MartialArts {
+public class MartialArts {
 
-    TAEKWONDO,
-    KUNGFU,
-    KARATE,
-    JUDO,
-    BOXING,
-    SUMO,
-    AIKIDO,
-    ESGRIMA,
-    KICKBOXING,
-    LUCHA_LIBRE,
-    NADA;
+    public static MartialArt TAEKWONDO = new MartialArt.Builder()
+    .withStanding()
+    .withKick()
+    .withPunching()
+    .withDamage(10)
+    .withAccesory()
+    .withAgilityConsumption(5)
+    .withPowerConsumption(3)
+    .build();
 
-    private boolean standing;
-
-    private boolean floor;
-
-    private boolean kick;
-
-    private boolean punching;
-
-    private int agilityConsumption;
-
-    private int powerConsumption;
-
-    private boolean accesory;
-
-    MartialArts(){
-    }
-    
 }

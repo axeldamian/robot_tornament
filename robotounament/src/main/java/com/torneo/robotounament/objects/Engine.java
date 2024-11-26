@@ -2,7 +2,7 @@ package com.torneo.robotounament.objects;
 
 //import com.torneo.robotounament.objects.*;
 
-public enum Motor {
+public enum Engine {
     NAPHTHA(10,100),
     ELECTRIC(2,500),
     HYBRID(6,300),
@@ -20,16 +20,16 @@ public enum Motor {
 
     private Energy type;
 
-    Motor(int energy, int power){
+    Engine(int energy, int power){
         this.energy = energy;
         this.power = power;
         this.works = true;
     }
 
-    Motor(int power, Energy energyWithWhichItWorks){
+    Engine(int power, Energy energyWithWhichItWorks){
         this.works = false;
         this.type = energyWithWhichItWorks;
-        this.power = 0;
+        this.power = power;
     }
 
     public void setPower(int power, Energy type) {
