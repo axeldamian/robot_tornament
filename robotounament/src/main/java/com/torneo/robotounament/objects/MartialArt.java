@@ -2,21 +2,6 @@ package com.torneo.robotounament.objects;
 
 public class MartialArt {
 
-   /*TAEKWONDO,
-    KUNGFU,
-    KARATE,
-    JUDO,
-    BOXING,
-    SUMO,
-    AIKIDO,
-    
-    ESGRIMA,
-    KICKBOXING,
-    LUCHA_LIBRE,
-    KENDO,
-    NADA;
-    */
-
     private boolean standing;
 
     private boolean floor;
@@ -53,6 +38,38 @@ public class MartialArt {
         this.powerConsumption = builder.powerConsumption;
         this.damage = builder.damage;
         this.accesory = builder.accesory;
+    }
+
+    public boolean getStanding() {
+        return this.standing;
+    }
+
+    public boolean getFloor() {
+        return this.floor;
+    }
+
+    public boolean getKick() {
+        return this.kick;
+    }
+
+    public boolean getPunching() {
+        return this.punching;
+    }
+
+    public int getAgilityConsumption() {
+        return this.agilityConsumption;
+    }
+
+    public int getPowerConsumption() {
+        return this.powerConsumption;
+    }
+
+    public int getDamage() {
+        return this.damage;
+    }
+
+    public boolean getAccesory() {
+        return this.accesory;
     }
 public static class Builder {
 
