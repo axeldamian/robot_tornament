@@ -3,14 +3,16 @@ package com.torneo.robotounament.objects;
 //import com.torneo.robotounament.objects.*;
 
 public enum Engine {
-    NAPHTHA(10,100),
-    ELECTRIC(2,500),
-    HYBRID(6,300),
-    GAS(1,700),
-    SUN(3,Energy.SUN),
-    WIND(2,Energy.WIND),
-    STEAM(4,Energy.STEAM),
-    ATOM(5,10000);
+    NAPHTHA("naptha",10,100),
+    ELECTRIC("electric",2,500),
+    HYBRID("hybrid",6,300),
+    GAS("gas",1,700),
+    SUN("sun",3,Energy.SUN),
+    WIND("wind",2,Energy.WIND),
+    STEAM("steam",4,Energy.STEAM),
+    ATOM("atom",5,10000);
+
+    private String fuel;
 
     private int power;
 
@@ -20,16 +22,27 @@ public enum Engine {
 
     private Energy type;
 
-    Engine(int energy, int power){
+    Engine(String fuel, int energy, int power){
         this.energy = energy;
+        this.fuel = fuel;
         this.power = power;
         this.works = true;
     }
 
-    Engine(int power, Energy energyWithWhichItWorks){
+    Engine(String fuel, int power, Energy energyWithWhichItWorks) {
+        this.fuel = fuel;
         this.works = false;
         this.type = energyWithWhichItWorks;
         this.power = power;
+    }
+
+
+    public void setFuel(String fuel) {
+        this.fuel = fuel;
+    }
+
+    public String getFuel() {
+        return this.fuel;
     }
 
     public void setPower(int power, Energy type) {

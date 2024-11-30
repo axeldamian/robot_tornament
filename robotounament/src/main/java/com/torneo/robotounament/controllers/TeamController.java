@@ -11,17 +11,17 @@ import com.torneo.robotounament.dtos.RobotJson;
 import com.torneo.robotounament.services.BuildRobot;
 
 @RestController
-public class RobotsController {
-
+public class TeamController {
+    
         @Autowired
         private BuildRobot service;
 
-        @PostMapping(value = "/build")
+        @PostMapping(value = "/build-team")
         public ResponseEntity<String> build(@RequestBody RobotJson r) {
 
                 service.ramdomComponents(r);
 
-                return new ResponseEntity<String>("Robot random created successfully", HttpStatus.OK);
+                return new ResponseEntity<String>("team created successfully", HttpStatus.OK);
         }
-    
+
 }
