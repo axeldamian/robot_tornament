@@ -1,146 +1,61 @@
-Videojuego de robots
+Juego de robots hecho en Java Springboot con Maven y Mongodb como base.
+
+Endpoints:
+
+```
+POST /robots/create
+```
 
 
-puntaje:
-
-1/posición
-se suma los resultados de cada lucha
-
-motor da potencia y energía
-
-
-eléctrico
+body json
+```
+{
+    "name":"test",
+    "setup":"test"
+}
+```
 
 
-a nafta 
+```
+POST /teams/create
+```
 
 
-híbrido: 2 cosas al mismo tiempo
+body json:
+```
+{
+    "name":"Epsilon Delta Limit",
+    "budget":10000000
+}
+```
+
+```
+/teams/show
+```
 
 
-atómico
+se volvió muy largo para una descripción en github, así que lo hice en google docs:
 
 
-armas:
-repetición y poder,
-ametralladora,
-misil,
-laser,
-golpe
+https://docs.google.com/document/d/1qMZjXT1r2274XlFIzsrgPtO2h0wjr4sFdIapUQ3cw2w/edit?tab=t.0
+https://docs.google.com/document/d/1ymrzWpDjToog23m4tMo2iH-FafBF-wB5jtyf_5i1k-M/edit?tab=t.0
+https://docs.google.com/document/d/1BibvNbw-RUYBDuxvXPmXDL_Xs3-_saNQVXsR7rAsUGg/edit?tab=t.0
 
+Para visualizar los documentos de mongo uso MongoDB Compass
 
-defensa:
-repetición, defensa, anticipación, objetivo alcanzado,
-campo de poder,
-armadura de piloto,
-campo láser,
-invisibilidad,
-
-partes:
-cabina del piloto, es la que mas vida tiene,
-piernas, si tenes una sola, es mas inestable, si te caes perdes,
-cabeza, es la vida,
-brazos, equipan armas,
-torso, defiende la cabina,
+<img width="59" alt="Captura de pantalla 2024-12-02 a la(s) 22 37 58" src="https://github.com/user-attachments/assets/696f25bc-9132-4073-9745-20faed51fc1f">
 
 
 
-funcion buildRobot
-
-construye un robot random
+<img width="237" alt="Captura de pantalla 2024-12-02 a la(s) 22 38 11" src="https://github.com/user-attachments/assets/386f2ef9-9815-4f60-b7aa-721d63db2233">
 
 
-la energía es lo que puede gastar de combustible,
-la atómica te da mucha energia, pero te daña, constantemente,
-influye en la altura, el peso, velocidad, energía
+<img width="1024" alt="Captura de pantalla 2024-12-02 a la(s) 22 38 32" src="https://github.com/user-attachments/assets/0a256e33-3449-4451-b148-5026e8d3eaf8">
 
 
-son 30 robots
 
 
-los robots tienen la misma vida, se reduce daño - defensa,
-por cada posición se gana plata para comprar cosas,
-
-si se acaba el combustible, perdiste,
-
-no hay empate, en el torneo si hay dos empates en la 1era posición al final, desempatan,
-
-un robot por cada fecha gana plata,
-el que gana el torneo gana mucho,
 
 
-el que gana el torneo puede enfrentar al campeón posta,
-1 temporada sin experiencia tiene, pero mucha plata,
-los cambios se pueden hacer cualquier fecha,
-el piloto tiene habilidad, influye si usa ataques de cuerpo o de lejos,
-velocidad del robot,
-si se desestabiliza con una pierna numero random entre 0 y 0,5,
-si está en 0,1 se cae,
-si tiene las 2 patas, es entre 0 y 1 o no se cae,
-puede tener hasta 4 pies, si da el presupuesto,
-hay un presupuesto máximo para gastar,
-actitud del robot, defensiva contra los primeros 10, los del medio 10, los del final 10, defenderse contra todos, ataque ,lo mismo,
-esconderse hasta que se vayan 10, etc…,
-el peso alenta la agilidad, para defenderse o atacar,
 
 
-campeón de torneo es new champion,
-new champion vs old champion, si no hay old champion, new champion es el actual campeón, el actual sera old champion,
-
-
-cualquiera puede retar al actual campeón, el new champion si o si,
-
-
-nombres:
-1 - red black tree
-2 - z-9000
-3 - atlas
-4 - deep blue
-5 - leibniz
-6 - newton
-7 - euclides 2.0
-8 - counter strike robot
-9 - Mechanica
-10 - Cyber Forge
-11 - Metal Uprising
-12 - Binary Assault
-13 - Cybro
-14 - zeta
-15 - alpha epsilon
-16 - 0 limit
-17 - Mecha alpha
-18 - goku force
-19 - x^3
-20 - x^2+y^2=1
-21 - intel transistor
-22 - megaled
-23 - mediafire
-24 - circle sort
-25 - chad ia
-26 - chain soft
-27 - ferrari virtual
-28 - hardware constrictor
-29 - green chip
-30 - robotgroup
-31 - cybergalactus
-32 - banana apple cyborg metal
-33 - fox robot
-34 - metal math
-35 - potter calculadora
-36 - Robot Rebellion
-37 - zeta
-38 - cyborg axel
-
-
-robots se guardan en base de datos,
-
-pelea a vida 0, 0 combustible,
-
-configuración de robot es el armado,
-si falta algo está incompleto,
-
-función improvement configura solo el robot si se puede, lo mejora,
-
-todos contra todos es, pueden complotar contra el 1ero, es una estrategia,
-o ir contra los últimos,
-una estrategia puede ser bancarsela con el que venga,
