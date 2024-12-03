@@ -1,6 +1,6 @@
 Juego de robots hecho en Java Springboot con Maven y Mongodb como base.
 
-Endpoints:
+## Endpoints:
 
 ```
 POST /robots/create
@@ -46,9 +46,9 @@ Para visualizar los documentos de mongo uso MongoDB Compass
 <img width="59" alt="Captura de pantalla 2024-12-02 a la(s) 22 37 58" src="https://github.com/user-attachments/assets/696f25bc-9132-4073-9745-20faed51fc1f">
 
 
-
+<br>
 <img width="237" alt="Captura de pantalla 2024-12-02 a la(s) 22 38 11" src="https://github.com/user-attachments/assets/386f2ef9-9815-4f60-b7aa-721d63db2233">
-
+<br>
 
 <img width="1024" alt="Captura de pantalla 2024-12-02 a la(s) 22 38 32" src="https://github.com/user-attachments/assets/0a256e33-3449-4451-b148-5026e8d3eaf8">
 
