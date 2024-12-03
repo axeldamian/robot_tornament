@@ -1,6 +1,6 @@
 package com.torneo.robotounament.objects;
 
-public class Piloto {
+public class Pilot {
 
     private String name;
 
@@ -34,7 +34,11 @@ public class Piloto {
 
     private boolean duelBeforeTheBattle;
 
-    public Piloto(String name, int age, int weight) {
+    private int prize;
+
+    private Double performance;
+
+    public Pilot(String name, int age, int weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -191,6 +195,21 @@ public class Piloto {
 
     public int getBattles() {
         return this.battles;
+    }
+
+    public void calculateCurrentPrize() {
+        this.prize = ((this.experience + this.battles) + this.battlesWon - this.battlesLose) * 10000;
+    }
+
+    public int getPrize() {
+        return this.prize;
+    }
+
+    public Double getPerformance() {
+        if(this.battlesWon == 0){
+            return 0.0;
+        }
+        return (double) ((this.battles/this.battlesWon)-(this.battles/this.battlesLose));
     }
 
 }

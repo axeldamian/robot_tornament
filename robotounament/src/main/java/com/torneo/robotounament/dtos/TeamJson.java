@@ -1,10 +1,17 @@
 package com.torneo.robotounament.dtos;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "teams")
 public class TeamJson {
 
     private String name;
 
-    private int money;
+    private String[] robots;
+
+    private String[] pilots;
+
+    private int budget;
 
     public void setName(String n) {
         this.name = n;
@@ -14,12 +21,12 @@ public class TeamJson {
         return this.name;
     }
 
-    public void setMoney(int m) {
-        this.money = m;
+    public void setBudget(int b) {
+        this.budget = b;
     }
 
-    public int getMoney() {
-        return this.money;
+    public int getBudget() {
+        return this.budget;
     }
     
 }

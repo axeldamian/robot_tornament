@@ -5,21 +5,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.torneo.robotounament.dtos.RobotJson;
-import com.torneo.robotounament.services.BuildRobot;
+import com.torneo.robotounament.services.RobotService;
 
 @RestController
+@RequestMapping("/robots")
 public class RobotsController {
 
         @Autowired
-        private BuildRobot service;
+        private RobotService service;
 
-        @PostMapping(value = "/build")
-        public ResponseEntity<String> build(@RequestBody RobotJson r) {
+        @PostMapping(value = "/create")
+        public ResponseEntity<String> create(@RequestBody RobotJson robot) {
 
-                service.ramdomComponents(r);
+                service.ramdomComponents(robot);
 
                 return new ResponseEntity<String>("Robot random created successfully", HttpStatus.OK);
         }

@@ -1,7 +1,7 @@
 package com.torneo.robotounament.dtos;
 
 import org.springframework.data.mongodb.core.mapping.Document;
-@Document(collection = "robotsetup")
+@Document(collection = "robots")
 public class RobotJson {
     
     private String name;

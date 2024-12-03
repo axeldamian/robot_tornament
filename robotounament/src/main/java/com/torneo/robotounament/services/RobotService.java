@@ -9,15 +9,15 @@ import org.springframework.stereotype.Service;
 import com.torneo.robotounament.dtos.RobotJson;
 
 @Service
-public class BuildRobot {
+public class RobotService {
 
     @Autowired
     private MongoTemplate mongoTemplate;
     
-    private static final Logger log = LogManager.getLogger(BuildRobot.class);
+    private static final Logger log = LogManager.getLogger(RobotService.class);
     
     public void ramdomComponents(RobotJson r){
         mongoTemplate.save(r);
-        log.info("random robot");
+        log.info("build a robot");
     }
 }
