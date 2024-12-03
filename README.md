@@ -43,7 +43,7 @@ body json:
 ```
 
 ```
-/teams/show
+GET /teams/show
 ```
 
 
