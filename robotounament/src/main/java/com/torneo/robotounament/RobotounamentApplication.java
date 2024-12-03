@@ -12,7 +12,7 @@ public class RobotounamentApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RobotounamentApplication.class, args);
-		log.info("start game");
+		log.info("start game----------------------------------------------------");
 	}
 
 }
