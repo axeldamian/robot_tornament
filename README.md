@@ -1,4 +1,17 @@
 Juego de robots hecho en Java Springboot con Maven y Mongodb como base.
+La idea es que cuando se pueda jugar le hago un frontend en REACT.
+
+En resumen, hay 10 equipos con 6 robots, en total 60 robots distintos.
+
+
+En cada fecha pelean todos los equipos. Es un versus de todos los equipos.
+
+
+Cada robot tiene un rol en el equipo vanguardia, retaguardia, flanco izquierdo, flanco derecho, reserva y principal.
+
+
+Va a haber un mercado de robots para cada equipo según su performance, cada equipo gana dinero en cada fecha según su posición.
+
 
 ## Endpoints:
 
