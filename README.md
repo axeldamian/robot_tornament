@@ -3,6 +3,8 @@ La idea es que cuando se pueda jugar le hago un frontend en REACT.
 
 En resumen, hay 10 equipos con 6 robots, en total 60 robots distintos.
 
+Cada robot tendrá un método para construirse y mejorará su construcción con ia.
+
 
 En cada fecha pelean todos los equipos. Es un versus de todos los equipos.
 
