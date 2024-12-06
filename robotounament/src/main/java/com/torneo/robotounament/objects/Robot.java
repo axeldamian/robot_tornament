@@ -10,5 +10,7 @@ public class Robot {
 
     private int defense;
     
-    
+    public void improve() {
+        
+    }
 }
