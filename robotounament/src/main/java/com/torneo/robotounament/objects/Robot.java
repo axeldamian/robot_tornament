@@ -9,6 +9,8 @@ public class Robot {
     private int attack;
 
     private int defense;
+
+    private Pilot pilot;
     
     public void improve() {
         
